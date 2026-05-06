@@ -261,7 +261,7 @@ fn scripts(project: Project) -> Element(msg) {
 
 fn script(project: Project, name: String) -> Element(msg) {
   let url_prefix = tom.get_string(project.options, ["html", "url_prefix"])
-  |> result.unwrap("./")
+  |> result.unwrap("")
 
   html.script(
     [attribute.type_("module"), attribute.src(url_prefix <> name <> ".js")],
